@@ -16,6 +16,8 @@ extension ZBarSymbolSet: SequenceType {
 }
 
 class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
+    var started: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         readerView.readerDelegate = self
@@ -27,10 +29,29 @@ class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
     }
 
     func readerView(readerView: ZBarReaderView!, didReadSymbols symbols: ZBarSymbolSet!, fromImage image: UIImage!) {
-            for symbol in symbols {
-                print(symbol.data as String)  // FIXME: remove
-                break;
-            }
+        var data = ""
+        for symbol in symbols {
+            data += symbol.data
+        }
+        ScanHistoryModel.getInstance().addScanHistory(data as String)
+
+        let hvc = tabBarController?.viewControllers![1] as! HistoriesViewController
+        let delegate = tabBarController?.delegate
+        delegate!.tabBarController!(tabBarController!, shouldSelectViewController: hvc)
     }
 
+    override func viewWillAppear(animated: Bool) {
+        if !started {
+            started = true
+            super.viewWillAppear(animated)
+        }
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        // ignored
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        // ignored
+    }
 }
