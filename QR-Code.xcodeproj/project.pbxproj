@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4789459D1D12D6AB00007E57 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789459C1D12D6AB00007E57 /* ScanViewController.swift */; };
+		4789459F1D12D77900007E57 /* HistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789459E1D12D77900007E57 /* HistoriesViewController.swift */; };
+		478945A11D12D7ED00007E57 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945A01D12D7ED00007E57 /* MainTabBarController.swift */; };
 		47E844631D12C7390064777A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844621D12C7390064777A /* AppDelegate.swift */; };
-		47E844651D12C7390064777A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844641D12C7390064777A /* ViewController.swift */; };
 		47E8446A1D12C7390064777A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E844691D12C7390064777A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4789459C1D12D6AB00007E57 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		4789459E1D12D77900007E57 /* HistoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriesViewController.swift; sourceTree = "<group>"; };
+		478945A01D12D7ED00007E57 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		47E8445F1D12C7390064777A /* QR-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E844621D12C7390064777A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47E844641D12C7390064777A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47E844691D12C7390064777A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47E8446E1D12C7390064777A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,9 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				47E844621D12C7390064777A /* AppDelegate.swift */,
-				47E844641D12C7390064777A /* ViewController.swift */,
 				47E844691D12C7390064777A /* Assets.xcassets */,
 				47E8446E1D12C7390064777A /* Info.plist */,
+				4789459C1D12D6AB00007E57 /* ScanViewController.swift */,
+				4789459E1D12D77900007E57 /* HistoriesViewController.swift */,
+				478945A01D12D7ED00007E57 /* MainTabBarController.swift */,
 			);
 			path = "QR-Code";
 			sourceTree = "<group>";
@@ -128,8 +134,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E844651D12C7390064777A /* ViewController.swift in Sources */,
+				4789459F1D12D77900007E57 /* HistoriesViewController.swift in Sources */,
 				47E844631D12C7390064777A /* AppDelegate.swift in Sources */,
+				478945A11D12D7ED00007E57 /* MainTabBarController.swift in Sources */,
+				4789459D1D12D6AB00007E57 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
