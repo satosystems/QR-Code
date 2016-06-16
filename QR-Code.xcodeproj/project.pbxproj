@@ -11,7 +11,6 @@
 		47E844651D12C7390064777A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844641D12C7390064777A /* ViewController.swift */; };
 		47E844681D12C7390064777A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E844661D12C7390064777A /* Main.storyboard */; };
 		47E8446A1D12C7390064777A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E844691D12C7390064777A /* Assets.xcassets */; };
-		47E8446D1D12C7390064777A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E8446B1D12C7390064777A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		47E844641D12C7390064777A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47E844671D12C7390064777A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47E844691D12C7390064777A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47E8446C1D12C7390064777A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E8446E1D12C7390064777A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +56,6 @@
 				47E844641D12C7390064777A /* ViewController.swift */,
 				47E844661D12C7390064777A /* Main.storyboard */,
 				47E844691D12C7390064777A /* Assets.xcassets */,
-				47E8446B1D12C7390064777A /* LaunchScreen.storyboard */,
 				47E8446E1D12C7390064777A /* Info.plist */,
 			);
 			path = "QR-Code";
@@ -123,7 +120,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E8446D1D12C7390064777A /* LaunchScreen.storyboard in Resources */,
 				47E8446A1D12C7390064777A /* Assets.xcassets in Resources */,
 				47E844681D12C7390064777A /* Main.storyboard in Resources */,
 			);
@@ -150,14 +146,6 @@
 				47E844671D12C7390064777A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		47E8446B1D12C7390064777A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47E8446C1D12C7390064777A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -252,6 +240,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "QR-Code/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.undo.og.QR-Code";
@@ -263,6 +252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "QR-Code/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.undo.og.QR-Code";
@@ -289,6 +279,7 @@
 				47E844731D12C7390064777A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
