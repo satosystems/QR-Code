@@ -6,16 +6,31 @@
 //  Copyright © 2016年 App research and development. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
-class ScanViewController : UIViewController {
+extension ZBarSymbolSet: SequenceType {
+    public func generate() -> NSFastGenerator {
+        return NSFastGenerator(self)
+    }
+}
+
+class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.redColor()  // FIXME: for debug
+        readerView.readerDelegate = self
+        showsCameraControls = false
+        showsZBarControls = false
+        tracksSymbols = true
+        readerView.torchMode = AVCaptureTorchMode.Off.rawValue
+        readerView.frame = view.frame
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func readerView(readerView: ZBarReaderView!, didReadSymbols symbols: ZBarSymbolSet!, fromImage image: UIImage!) {
+            for symbol in symbols {
+                print(symbol.data as String)  // FIXME: remove
+                break;
+            }
     }
+
 }
