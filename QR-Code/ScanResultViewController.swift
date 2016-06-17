@@ -53,7 +53,7 @@ class ScanResultViewController: UIViewController {
                 let pasteboard = UIPasteboard.generalPasteboard()
                 pasteboard.setValue(data, forPasteboardType: "public.text")
 
-                print("Data of QR Code has been copied to clipboard.")  // FIXME: change to Toast
+                view.makeToast("Data of QR Code has been copied to clipboard.")
             } else {
                 if let url = NSURL(string: data) {
                     UIApplication.sharedApplication().openURL(url)

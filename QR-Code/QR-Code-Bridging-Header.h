@@ -4,3 +4,4 @@
 
 #import "ZBarSDK.h"
 #import "ZBarSymbol.h"
+#import "UIView+Toast.h"

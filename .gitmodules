@@ -1,0 +1,3 @@
+[submodule "QR-Code/libs/Toast"]
+	path = QR-Code/libs/Toast
+	url = https://github.com/scalessec/Toast.git

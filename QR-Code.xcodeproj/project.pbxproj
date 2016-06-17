@@ -16,6 +16,7 @@
 		478945BD1D13FA8600007E57 /* SizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945BC1D13FA8600007E57 /* SizeUtils.swift */; };
 		478945C11D140B6300007E57 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945C01D140B6300007E57 /* ScanResultViewController.swift */; };
 		478945C31D1419E400007E57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945C21D1419E400007E57 /* Extensions.swift */; };
+		478945CD1D1434F200007E57 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 478945CC1D1434F200007E57 /* UIView+Toast.m */; };
 		47E844631D12C7390064777A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844621D12C7390064777A /* AppDelegate.swift */; };
 		47E8446A1D12C7390064777A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E844691D12C7390064777A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		478945BC1D13FA8600007E57 /* SizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeUtils.swift; sourceTree = "<group>"; };
 		478945C01D140B6300007E57 /* ScanResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
 		478945C21D1419E400007E57 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		478945CC1D1434F200007E57 /* UIView+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "QR-Code/libs/Toast/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
 		47E8445F1D12C7390064777A /* QR-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E844621D12C7390064777A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E844691D12C7390064777A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		47E844561D12C7390064777A = {
 			isa = PBXGroup;
 			children = (
+				478945CC1D1434F200007E57 /* UIView+Toast.m */,
 				478945B11D12F6A800007E57 /* libzbar.a */,
 				47E844611D12C7390064777A /* QR-Code */,
 				47E844601D12C7390064777A /* Products */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478945CD1D1434F200007E57 /* UIView+Toast.m in Sources */,
 				4789459F1D12D77900007E57 /* HistoriesViewController.swift in Sources */,
 				478945C31D1419E400007E57 /* Extensions.swift in Sources */,
 				478945BD1D13FA8600007E57 /* SizeUtils.swift in Sources */,
@@ -262,7 +266,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/QR-Code/libs/ZBarSDK/Headers";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/QR-Code/libs/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/QR-Code/libs/Toast/Toast/Toast",
+				);
 				INFOPLIST_FILE = "QR-Code/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -284,7 +291,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/QR-Code/libs/ZBarSDK/Headers";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/QR-Code/libs/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/QR-Code/libs/Toast/Toast/Toast",
+				);
 				INFOPLIST_FILE = "QR-Code/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
