@@ -8,14 +8,22 @@
 
 import UIKit
 
-class HistoriesViewController : UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.yellowColor()  // FIXME: for debug
+class HistoriesViewController: TableViewController {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ScanHistoryModel.getInstance().loadScanHistories().count
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        cell.textLabel?.text = ScanHistoryModel.getInstance().loadScanHistories()[indexPath.row]
+        return cell
+    }
+
+    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        openScanResult(ScanHistoryModel.getInstance().loadScanHistories()[indexPath.row])
+    }
+
+    func openScanResult(data: String) {
+        print("openScanResult")  // FIXME: remove
     }
 }

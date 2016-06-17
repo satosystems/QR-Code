@@ -12,6 +12,7 @@
 		478945A11D12D7ED00007E57 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945A01D12D7ED00007E57 /* MainTabBarController.swift */; };
 		478945B21D12F6A800007E57 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478945B11D12F6A800007E57 /* libzbar.a */; };
 		478945B91D13134100007E57 /* ScanHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945B81D13134100007E57 /* ScanHistoryModel.swift */; };
+		478945BB1D13F88A00007E57 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945BA1D13F88A00007E57 /* TableViewController.swift */; };
 		47E844631D12C7390064777A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844621D12C7390064777A /* AppDelegate.swift */; };
 		47E8446A1D12C7390064777A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E844691D12C7390064777A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		478945B11D12F6A800007E57 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = "QR-Code/libs/ZBarSDK/libzbar.a"; sourceTree = "<group>"; };
 		478945B31D12F7FD00007E57 /* QR-Code-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QR-Code-Bridging-Header.h"; sourceTree = "<group>"; };
 		478945B81D13134100007E57 /* ScanHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanHistoryModel.swift; sourceTree = "<group>"; };
+		478945BA1D13F88A00007E57 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		47E8445F1D12C7390064777A /* QR-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E844621D12C7390064777A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E844691D12C7390064777A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				478945A01D12D7ED00007E57 /* MainTabBarController.swift */,
 				478945B31D12F7FD00007E57 /* QR-Code-Bridging-Header.h */,
 				478945B81D13134100007E57 /* ScanHistoryModel.swift */,
+				478945BA1D13F88A00007E57 /* TableViewController.swift */,
 			);
 			path = "QR-Code";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4789459F1D12D77900007E57 /* HistoriesViewController.swift in Sources */,
+				478945BB1D13F88A00007E57 /* TableViewController.swift in Sources */,
 				478945B91D13134100007E57 /* ScanHistoryModel.swift in Sources */,
 				47E844631D12C7390064777A /* AppDelegate.swift in Sources */,
 				478945A11D12D7ED00007E57 /* MainTabBarController.swift in Sources */,
