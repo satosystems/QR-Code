@@ -45,6 +45,7 @@ class HistoriesViewController: UIViewController {
     }
 
     func openScanResult(data: String) {
-        print("openScanResult")  // FIXME: remove
+        let srvc = ScanResultViewController(data: data)
+        presentViewController(srvc, animated: true, completion: nil)
     }
 }

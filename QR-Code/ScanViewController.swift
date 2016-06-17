@@ -9,12 +9,6 @@
 import AVFoundation
 import UIKit
 
-extension ZBarSymbolSet: SequenceType {
-    public func generate() -> NSFastGenerator {
-        return NSFastGenerator(self)
-    }
-}
-
 class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
     var started: Bool = false
 
