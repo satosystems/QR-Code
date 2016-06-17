@@ -29,7 +29,9 @@ class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
         }
         ScanHistoryModel.getInstance().addScanHistory(data as String)
 
-        let hvc = tabBarController?.viewControllers![1] as! HistoriesViewController
+        let nc = tabBarController?.viewControllers![1] as! UINavigationController
+        let hvc = nc.childViewControllers[0] as! HistoriesViewController
+        hvc.tableView = nil
         let delegate = tabBarController?.delegate
         delegate!.tabBarController!(tabBarController!, shouldSelectViewController: hvc)
     }

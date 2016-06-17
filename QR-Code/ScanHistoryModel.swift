@@ -38,4 +38,11 @@ class ScanHistoryModel {
         }
         return histories!
     }
+
+    func removeAtIndex(index: Int) {
+        histories?.removeAtIndex(index)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(histories, forKey: key)
+        userDefaults.synchronize()
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScanResultViewController: UIViewController {
+class ScanResultViewController: BaseViewController {
     class ActionsTableViewController: TableViewController {
         var data: String
         var isScheme: Bool = false
@@ -75,9 +75,12 @@ class ScanResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
 
-        let margin = CGFloat(10)
+        title = "Scan Result"
+
+        let button = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(ScanResultViewController.onClick))
+        navigationItem.rightBarButtonItem = button
+
         let statusBarHeight = SizeUtils.statusBarHeight()
 
         var y = margin + statusBarHeight
@@ -125,6 +128,10 @@ class ScanResultViewController: UIViewController {
                                 y: y,
                                 width: view.frame.width,
                                 height: view.frame.height - y)
+    }
+
+    func onClick() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

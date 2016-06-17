@@ -15,11 +15,12 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
 
         let scanView = ScanViewController()
         let historiesView = HistoriesViewController()
+        let navigationView = UINavigationController(rootViewController: historiesView)
 
         scanView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: 1)  // FIXME: change icon
-        historiesView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.History, tag: 2)  // FIXME: change icon
+        navigationView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.History, tag: 2)  // FIXME: change icon
 
-        self.setViewControllers([scanView, historiesView], animated: false)
+        self.setViewControllers([scanView, navigationView], animated: false)
     }
 
     override func didReceiveMemoryWarning() {

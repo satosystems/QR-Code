@@ -14,6 +14,10 @@ extension UIColor {
         return UIColor.rgbColor(0xF5F5F5)
     }
 
+    class func lightSteelBlueColor() -> UIColor {
+        return UIColor.rgbColor(0xB0C4DE)
+    }
+
     class func rgbColor(rgbValue: UInt) -> UIColor {
         return UIColor(
             red:   CGFloat((rgbValue & 0xFF0000) >> 16) / 0xFF,
