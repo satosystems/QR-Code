@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>StringsTable</key>
+<string>Acknowledgements</string>
+<key>PreferenceSpecifiers</key>
+<array>
+<dict>
+<key>Type</key>
+<string>PSGroupSpecifier</string>
+<key>Title</key>
+<string>Toast</string>
+<key>FooterText</key>
+<string>
+Copyright (c) 2011-2015 Charles Scalesse.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</string>
+</dict>
+<dict>
+<key>Type</key>
+<string>PSGroupSpecifier</string>
+<key>Title</key>
+<string>ZBar</string>
+<key>FooterText</key>
+<string>
+The ZBar Bar Code Reader is Copyright (C) 2007-2011 Jeff Brown &lt;spadix@users.sourceforge.net&gt;
+The QR Code reader is Copyright (C) 1999-2009 Timothy B. Terriberry &lt;tterribe@xiph.org&gt;
+
+You can redistribute this library and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+ISAAC is based on the public domain implementation by Robert J. Jenkins Jr., and is itself public domain.
+
+Portions of the bit stream reader are copyright (C) The Xiph.Org Foundation 1994-2008, and are licensed under a BSD-style license.
+
+The Reed-Solomon decoder is derived from an implementation (C) 1991-1995 Henry Minsky (hqm@ua.com, hqm@ai.mit.edu), and is licensed under the LGPL with permission.
+</string>
+</dict>
+<dict>
+<key>Type</key>
+<string>PSGroupSpecifier</string>
+<key>Title</key>
+<string>GLYPHICONS</string>
+<key>FooterText</key>
+<string>
+-------------------------------------------
+THANK YOU FOR USING GLYPHICONS
+-------------------------------------------
+If you would like to be among the first ones to hear about all the news, follow @GLYPHICONS on Twitter.
+
+
+
+-------------------------------------------
+LICENSE
+-------------------------------------------
+are released under the Creative Commons Attribution 3.0 Unported (CC BY 3.0). The GLYPHICONS FREE can be used both commercially and for personal use, but you must always add a link to GLYPHICONS.com in a prominent place (e.g. the footer of a website), include the CC-BY license and the reference to GLYPHICONS.com on every page using icons.
+
+All icons are provided "as they are" without a warranty of any kind, either expressed or implied. I am not liable for any damages caused of any defects in this icon set. All logos and trademarks in social icons are the property of the respective trademark owners.®
+
+
+
+-------------------------------------------
+LICENSE FOR HALFLINGS IN BOOTSTRAP
+-------------------------------------------
+GLYPHICONS Halflings font is also released as an extension of a Bootstrap (www.getbootstrap.com) for free and it is released under the same license as Bootstrap. While you are not required to include attribution on your Bootstrap-based projects, I would certainly appreciate any form of support, even a nice Tweet is enough. Of course if you want, you can say thank you and support me by buying more icons on www.glyphicons.com.
+
+
+
+-------------------------------------------
+CONTACT
+-------------------------------------------
+Web: http://glyphicons.com/
+Email: glyphicons@gmail.com
+Twitter: http://twitter.com/glyphicons
+
+
+
+-------------------------------------------
+NOTE
+-------------------------------------------
+If you want to use the icons without restrictions, please buy any version on www.glyphicons.com, thank you.
+
+Jan Kovařík
+</string>
+</dict>
+</array>
+</dict>
+</plist>
+
