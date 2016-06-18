@@ -10,6 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     let margin = CGFloat(10)
+    let buttonHeight = CGFloat(50)
 
     override func viewDidLoad() {
         super.viewDidLoad()

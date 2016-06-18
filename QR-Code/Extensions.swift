@@ -14,8 +14,16 @@ extension UIColor {
         return UIColor.rgbColor(0xF5F5F5)
     }
 
-    class func lightSteelBlueColor() -> UIColor {
-        return UIColor.rgbColor(0xB0C4DE)
+    class func appColor() -> UIColor {
+        return UIColor.rgbColor(0x3B6BB0)
+    }
+
+    class func appHighlightColor() -> UIColor {
+        return UIColor.rgbColor(0x305B98)
+    }
+
+    class func appBorderColor() -> UIColor {
+        return UIColor.rgbColor(0x234B7C)
     }
 
     class func rgbColor(rgbValue: UInt) -> UIColor {
