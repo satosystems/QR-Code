@@ -17,8 +17,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let historiesView = HistoriesViewController()
         let navigationView = UINavigationController(rootViewController: historiesView)
 
-        scanView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: 1)  // FIXME: change icon
-        navigationView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.History, tag: 2)  // FIXME: change icon
+        scanView.tabBarItem = UITabBarItem(title: "Scan", image: UIImage(named: "camera"), tag: 1)
+        navigationView.tabBarItem = UITabBarItem(title: "Histories", image: UIImage(named: "list"), tag: 2)
 
         self.setViewControllers([scanView, navigationView], animated: false)
     }

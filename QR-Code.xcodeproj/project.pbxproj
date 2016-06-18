@@ -20,6 +20,8 @@
 		478945D11D14599F00007E57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945D01D14599F00007E57 /* BaseViewController.swift */; };
 		478945D31D150ED400007E57 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945D21D150ED400007E57 /* CustomButton.swift */; };
 		478945D71D1567F900007E57 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 478945D61D1567F900007E57 /* Settings.bundle */; };
+		478945E51D157AD300007E57 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 478945E31D157AD300007E57 /* camera@2x.png */; };
+		478945E61D157AD300007E57 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 478945E41D157AD300007E57 /* list@2x.png */; };
 		47E844631D12C7390064777A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844621D12C7390064777A /* AppDelegate.swift */; };
 		47E8446A1D12C7390064777A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E844691D12C7390064777A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,8 @@
 		478945D01D14599F00007E57 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		478945D21D150ED400007E57 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		478945D61D1567F900007E57 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		478945E31D157AD300007E57 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		478945E41D157AD300007E57 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		47E8445F1D12C7390064777A /* QR-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E844621D12C7390064777A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E844691D12C7390064777A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		478945E21D157AD300007E57 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				478945E31D157AD300007E57 /* camera@2x.png */,
+				478945E41D157AD300007E57 /* list@2x.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		47E844561D12C7390064777A = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 		47E844611D12C7390064777A /* QR-Code */ = {
 			isa = PBXGroup;
 			children = (
+				478945E21D157AD300007E57 /* res */,
 				47E844621D12C7390064777A /* AppDelegate.swift */,
 				47E844691D12C7390064777A /* Assets.xcassets */,
 				47E8446E1D12C7390064777A /* Info.plist */,
@@ -157,8 +171,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478945E61D157AD300007E57 /* list@2x.png in Resources */,
 				478945D71D1567F900007E57 /* Settings.bundle in Resources */,
 				47E8446A1D12C7390064777A /* Assets.xcassets in Resources */,
+				478945E51D157AD300007E57 /* camera@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
