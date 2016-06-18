@@ -33,6 +33,8 @@ class ScanResultViewController: BaseViewController {
         y += SizeUtils.navigationBarHeight(navigationController!)
         y += margin
 
+        addLabel("Data", y: &y)
+
         let label = UILabel()
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.ByCharWrapping
@@ -50,6 +52,9 @@ class ScanResultViewController: BaseViewController {
         y += label.frame.height + margin
 
         view.addSubview(label)
+
+        y += margin
+        addLabel("Actions", y: &y)
 
         if isScheme(data) {
             addButton("Open in App", y: &y, action: #selector(ScanResultViewController.openInApp))
@@ -93,6 +98,15 @@ class ScanResultViewController: BaseViewController {
         button.addTarget(self, action: action, forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         y += buttonHeight + margin
+    }
+
+    private func addLabel(title: String, inout y: CGFloat) {
+        let frame = CGRect(x: margin, y: y, width: view.frame.width - margin * 2, height: labelHeight)
+        let label = UILabel(frame: frame)
+        label.text = title
+        label.font = UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
+        view.addSubview(label)
+        y += labelHeight + margin
     }
 
     override func didReceiveMemoryWarning() {

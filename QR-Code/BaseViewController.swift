@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     let margin = CGFloat(10)
     let buttonHeight = CGFloat(50)
+    let labelHeight = CGFloat(25)
 
     override func viewDidLoad() {
         super.viewDidLoad()
