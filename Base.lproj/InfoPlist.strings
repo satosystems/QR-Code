@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  QR-Code
+
+  Created by Satoshi Ogata on 2016/06/19.
+  Copyright © 2016年 App research and development. All rights reserved.
+*/
+
+CFBundleDisplayName = "QR Code";
