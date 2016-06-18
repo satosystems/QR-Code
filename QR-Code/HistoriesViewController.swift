@@ -38,6 +38,7 @@ class HistoriesViewController: BaseViewController {
     }
 
     var tableView: UITableView! = nil
+    var withDetail: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +72,25 @@ class HistoriesViewController: BaseViewController {
         }
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if withDetail {
+            withDetail = false
+            let data = ScanHistoryModel.getInstance().loadScanHistories()[0]
+            openScanResult(data)
+        }
+    }
+
     override func setEditing(editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         tableView.editing = editing
+    }
+
+    func openScanResult() {
+        tableView = nil
+        withDetail = true
+        let delegate = tabBarController?.delegate
+        delegate!.tabBarController!(tabBarController!, shouldSelectViewController: self)
     }
 
     func openScanResult(data: String) {
