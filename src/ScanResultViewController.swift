@@ -23,7 +23,7 @@ class ScanResultViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Scan Result"
+        title = NSLocalizedString("Scan Result", comment: "Scan Result")
 
         let button = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(ScanResultViewController.onClick))
         navigationItem.rightBarButtonItem = button
@@ -33,7 +33,7 @@ class ScanResultViewController: BaseViewController {
         y += SizeUtils.navigationBarHeight(navigationController!)
         y += margin
 
-        addLabel("Data", y: &y)
+        addLabel(NSLocalizedString("Data", comment: "Data"), y: &y)
 
         let label = UILabel()
         label.numberOfLines = 0
@@ -54,12 +54,12 @@ class ScanResultViewController: BaseViewController {
         view.addSubview(label)
 
         y += margin
-        addLabel("Actions", y: &y)
+        addLabel(NSLocalizedString("Actions", comment: "Actions"), y: &y)
 
         if isScheme(data) {
-            addButton("Open in App", y: &y, action: #selector(ScanResultViewController.openInApp))
+            addButton(NSLocalizedString("Open in App", comment: "Open in App"), y: &y, action: #selector(ScanResultViewController.openInApp))
         }
-        addButton("Copy to Clipboard", y: &y, action: #selector(ScanResultViewController.copyToClipboard))
+        addButton(NSLocalizedString("Copy to Clipboard", comment: "Copy to Clipboard"), y: &y, action: #selector(ScanResultViewController.copyToClipboard))
     }
 
     func onClick() {
@@ -76,7 +76,7 @@ class ScanResultViewController: BaseViewController {
         let pasteboard = UIPasteboard.generalPasteboard()
         pasteboard.setValue(data, forPasteboardType: "public.text")
 
-        view.makeToast("Data of QR Code has been copied to clipboard.")
+        view.makeToast(NSLocalizedString("Data of QR Code has been copied to clipboard.", comment: "Data of QR Code has been copied to clipboard."))
     }
 
     private func isScheme(data: String) -> Bool {

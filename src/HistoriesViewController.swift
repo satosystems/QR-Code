@@ -43,7 +43,7 @@ class HistoriesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Histories"
+        title = NSLocalizedString("Histories", comment: "履歴")
 
         navigationItem.rightBarButtonItem = editButtonItem()
     }

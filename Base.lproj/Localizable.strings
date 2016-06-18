@@ -1,0 +1,16 @@
+/*
+  Localizable.strings
+  QR-Code
+
+  Created by Satoshi Ogata on 2016/06/19.
+  Copyright © 2016年 App research and development. All rights reserved.
+*/
+
+"Histories" = "Histories";
+"Scan" = "Scan";
+"Scan Result" = "Scan Result";
+"Data" = "Data";
+"Actions" = "Actions";
+"Open in App" = "Open in App";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Data of QR Code has been copied to clipboard." = "Data of QR Code has been copied to clipboard.";
