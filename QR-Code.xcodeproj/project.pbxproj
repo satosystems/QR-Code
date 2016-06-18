@@ -7,46 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4789459D1D12D6AB00007E57 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789459C1D12D6AB00007E57 /* ScanViewController.swift */; };
-		4789459F1D12D77900007E57 /* HistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789459E1D12D77900007E57 /* HistoriesViewController.swift */; };
-		478945A11D12D7ED00007E57 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945A01D12D7ED00007E57 /* MainTabBarController.swift */; };
-		478945B21D12F6A800007E57 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478945B11D12F6A800007E57 /* libzbar.a */; };
-		478945B91D13134100007E57 /* ScanHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945B81D13134100007E57 /* ScanHistoryModel.swift */; };
-		478945BB1D13F88A00007E57 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945BA1D13F88A00007E57 /* TableViewController.swift */; };
-		478945BD1D13FA8600007E57 /* SizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945BC1D13FA8600007E57 /* SizeUtils.swift */; };
-		478945C11D140B6300007E57 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945C01D140B6300007E57 /* ScanResultViewController.swift */; };
-		478945C31D1419E400007E57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945C21D1419E400007E57 /* Extensions.swift */; };
-		478945CD1D1434F200007E57 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 478945CC1D1434F200007E57 /* UIView+Toast.m */; };
-		478945D11D14599F00007E57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945D01D14599F00007E57 /* BaseViewController.swift */; };
-		478945D31D150ED400007E57 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945D21D150ED400007E57 /* CustomButton.swift */; };
-		478945D71D1567F900007E57 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 478945D61D1567F900007E57 /* Settings.bundle */; };
-		478945E51D157AD300007E57 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 478945E31D157AD300007E57 /* camera@2x.png */; };
-		478945E61D157AD300007E57 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 478945E41D157AD300007E57 /* list@2x.png */; };
-		47E844631D12C7390064777A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E844621D12C7390064777A /* AppDelegate.swift */; };
-		47E8446A1D12C7390064777A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E844691D12C7390064777A /* Assets.xcassets */; };
+		478945E81D15BEE600007E57 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478945E71D15BEE600007E57 /* libzbar.a */; };
+		478945F61D15BF8700007E57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945EA1D15BF8700007E57 /* AppDelegate.swift */; };
+		478945F71D15BF8700007E57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945EB1D15BF8700007E57 /* BaseViewController.swift */; };
+		478945F81D15BF8700007E57 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945EC1D15BF8700007E57 /* CustomButton.swift */; };
+		478945F91D15BF8700007E57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945ED1D15BF8700007E57 /* Extensions.swift */; };
+		478945FA1D15BF8700007E57 /* HistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945EE1D15BF8700007E57 /* HistoriesViewController.swift */; };
+		478945FB1D15BF8700007E57 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945EF1D15BF8700007E57 /* MainTabBarController.swift */; };
+		478945FC1D15BF8700007E57 /* ScanHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F11D15BF8700007E57 /* ScanHistoryModel.swift */; };
+		478945FD1D15BF8700007E57 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F21D15BF8700007E57 /* ScanResultViewController.swift */; };
+		478945FE1D15BF8700007E57 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F31D15BF8700007E57 /* ScanViewController.swift */; };
+		478945FF1D15BF8700007E57 /* SizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F41D15BF8700007E57 /* SizeUtils.swift */; };
+		478946001D15BF8700007E57 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F51D15BF8700007E57 /* TableViewController.swift */; };
+		478946021D15BF9300007E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478946011D15BF9300007E57 /* Assets.xcassets */; };
+		478946051D15BFA400007E57 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478946041D15BFA400007E57 /* LaunchImage.xcassets */; };
+		478946071D15BFBA00007E57 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 478946061D15BFBA00007E57 /* Info.plist */; };
+		478946091D15BFC900007E57 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 478946081D15BFC900007E57 /* Settings.bundle */; };
+		4789460B1D15C01100007E57 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4789460A1D15C01100007E57 /* UIView+Toast.m */; };
+		4789460F1D15C07D00007E57 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4789460D1D15C07D00007E57 /* camera@2x.png */; };
+		478946101D15C07D00007E57 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4789460E1D15C07D00007E57 /* list@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4789459C1D12D6AB00007E57 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		4789459E1D12D77900007E57 /* HistoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriesViewController.swift; sourceTree = "<group>"; };
-		478945A01D12D7ED00007E57 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		478945B11D12F6A800007E57 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = "QR-Code/libs/ZBarSDK/libzbar.a"; sourceTree = "<group>"; };
-		478945B31D12F7FD00007E57 /* QR-Code-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QR-Code-Bridging-Header.h"; sourceTree = "<group>"; };
-		478945B81D13134100007E57 /* ScanHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanHistoryModel.swift; sourceTree = "<group>"; };
-		478945BA1D13F88A00007E57 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		478945BC1D13FA8600007E57 /* SizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeUtils.swift; sourceTree = "<group>"; };
-		478945C01D140B6300007E57 /* ScanResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
-		478945C21D1419E400007E57 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		478945CC1D1434F200007E57 /* UIView+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "QR-Code/libs/Toast/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
-		478945D01D14599F00007E57 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		478945D21D150ED400007E57 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		478945D61D1567F900007E57 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		478945E31D157AD300007E57 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
-		478945E41D157AD300007E57 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		478945E71D15BEE600007E57 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzbar.a; path = libs/ZBarSDK/libzbar.a; sourceTree = "<group>"; };
+		478945EA1D15BF8700007E57 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		478945EB1D15BF8700007E57 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		478945EC1D15BF8700007E57 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		478945ED1D15BF8700007E57 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		478945EE1D15BF8700007E57 /* HistoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriesViewController.swift; sourceTree = "<group>"; };
+		478945EF1D15BF8700007E57 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		478945F01D15BF8700007E57 /* QR-Code-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QR-Code-Bridging-Header.h"; sourceTree = "<group>"; };
+		478945F11D15BF8700007E57 /* ScanHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanHistoryModel.swift; sourceTree = "<group>"; };
+		478945F21D15BF8700007E57 /* ScanResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
+		478945F31D15BF8700007E57 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		478945F41D15BF8700007E57 /* SizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeUtils.swift; sourceTree = "<group>"; };
+		478945F51D15BF8700007E57 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		478946011D15BF9300007E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		478946041D15BFA400007E57 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImage.xcassets; sourceTree = "<group>"; };
+		478946061D15BFBA00007E57 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		478946081D15BFC900007E57 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		4789460A1D15C01100007E57 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "libs/Toast/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
+		4789460D1D15C07D00007E57 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		4789460E1D15C07D00007E57 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		47E8445F1D12C7390064777A /* QR-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47E844621D12C7390064777A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47E844691D12C7390064777A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47E8446E1D12C7390064777A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,28 +57,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				478945B21D12F6A800007E57 /* libzbar.a in Frameworks */,
+				478945E81D15BEE600007E57 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		478945E21D157AD300007E57 /* res */ = {
+		478945E91D15BF8700007E57 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				478945E31D157AD300007E57 /* camera@2x.png */,
-				478945E41D157AD300007E57 /* list@2x.png */,
+				478945EA1D15BF8700007E57 /* AppDelegate.swift */,
+				478945EB1D15BF8700007E57 /* BaseViewController.swift */,
+				478945EC1D15BF8700007E57 /* CustomButton.swift */,
+				478945ED1D15BF8700007E57 /* Extensions.swift */,
+				478945EE1D15BF8700007E57 /* HistoriesViewController.swift */,
+				478945EF1D15BF8700007E57 /* MainTabBarController.swift */,
+				478945F01D15BF8700007E57 /* QR-Code-Bridging-Header.h */,
+				478945F11D15BF8700007E57 /* ScanHistoryModel.swift */,
+				478945F21D15BF8700007E57 /* ScanResultViewController.swift */,
+				478945F31D15BF8700007E57 /* ScanViewController.swift */,
+				478945F41D15BF8700007E57 /* SizeUtils.swift */,
+				478945F51D15BF8700007E57 /* TableViewController.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		478946031D15BF9C00007E57 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		4789460C1D15C07D00007E57 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				4789460D1D15C07D00007E57 /* camera@2x.png */,
+				4789460E1D15C07D00007E57 /* list@2x.png */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		478946111D15C09200007E57 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				478945E71D15BEE600007E57 /* libzbar.a */,
+				4789460A1D15C01100007E57 /* UIView+Toast.m */,
+			);
+			name = libs;
 			sourceTree = "<group>";
 		};
 		47E844561D12C7390064777A = {
 			isa = PBXGroup;
 			children = (
-				478945CC1D1434F200007E57 /* UIView+Toast.m */,
-				478945B11D12F6A800007E57 /* libzbar.a */,
-				47E844611D12C7390064777A /* QR-Code */,
+				478946011D15BF9300007E57 /* Assets.xcassets */,
+				478946041D15BFA400007E57 /* LaunchImage.xcassets */,
+				478946081D15BFC900007E57 /* Settings.bundle */,
+				478946061D15BFBA00007E57 /* Info.plist */,
+				478946031D15BF9C00007E57 /* Base.lproj */,
+				478945E91D15BF8700007E57 /* src */,
+				4789460C1D15C07D00007E57 /* res */,
+				478946111D15C09200007E57 /* libs */,
 				47E844601D12C7390064777A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,29 +129,6 @@
 				47E8445F1D12C7390064777A /* QR-Code.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		47E844611D12C7390064777A /* QR-Code */ = {
-			isa = PBXGroup;
-			children = (
-				478945E21D157AD300007E57 /* res */,
-				47E844621D12C7390064777A /* AppDelegate.swift */,
-				47E844691D12C7390064777A /* Assets.xcassets */,
-				47E8446E1D12C7390064777A /* Info.plist */,
-				4789459C1D12D6AB00007E57 /* ScanViewController.swift */,
-				4789459E1D12D77900007E57 /* HistoriesViewController.swift */,
-				478945A01D12D7ED00007E57 /* MainTabBarController.swift */,
-				478945B31D12F7FD00007E57 /* QR-Code-Bridging-Header.h */,
-				478945B81D13134100007E57 /* ScanHistoryModel.swift */,
-				478945BA1D13F88A00007E57 /* TableViewController.swift */,
-				478945BC1D13FA8600007E57 /* SizeUtils.swift */,
-				478945C01D140B6300007E57 /* ScanResultViewController.swift */,
-				478945C21D1419E400007E57 /* Extensions.swift */,
-				478945D01D14599F00007E57 /* BaseViewController.swift */,
-				478945D21D150ED400007E57 /* CustomButton.swift */,
-				478945D61D1567F900007E57 /* Settings.bundle */,
-			);
-			path = "QR-Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +191,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				478945E61D157AD300007E57 /* list@2x.png in Resources */,
-				478945D71D1567F900007E57 /* Settings.bundle in Resources */,
-				47E8446A1D12C7390064777A /* Assets.xcassets in Resources */,
-				478945E51D157AD300007E57 /* camera@2x.png in Resources */,
+				478946091D15BFC900007E57 /* Settings.bundle in Resources */,
+				4789460F1D15C07D00007E57 /* camera@2x.png in Resources */,
+				478946051D15BFA400007E57 /* LaunchImage.xcassets in Resources */,
+				478946021D15BF9300007E57 /* Assets.xcassets in Resources */,
+				478946101D15C07D00007E57 /* list@2x.png in Resources */,
+				478946071D15BFBA00007E57 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,18 +223,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				478945CD1D1434F200007E57 /* UIView+Toast.m in Sources */,
-				4789459F1D12D77900007E57 /* HistoriesViewController.swift in Sources */,
-				478945D11D14599F00007E57 /* BaseViewController.swift in Sources */,
-				478945C31D1419E400007E57 /* Extensions.swift in Sources */,
-				478945BD1D13FA8600007E57 /* SizeUtils.swift in Sources */,
-				478945BB1D13F88A00007E57 /* TableViewController.swift in Sources */,
-				478945B91D13134100007E57 /* ScanHistoryModel.swift in Sources */,
-				478945C11D140B6300007E57 /* ScanResultViewController.swift in Sources */,
-				478945D31D150ED400007E57 /* CustomButton.swift in Sources */,
-				47E844631D12C7390064777A /* AppDelegate.swift in Sources */,
-				478945A11D12D7ED00007E57 /* MainTabBarController.swift in Sources */,
-				4789459D1D12D6AB00007E57 /* ScanViewController.swift in Sources */,
+				478945F61D15BF8700007E57 /* AppDelegate.swift in Sources */,
+				478945F71D15BF8700007E57 /* BaseViewController.swift in Sources */,
+				478945FB1D15BF8700007E57 /* MainTabBarController.swift in Sources */,
+				478945F81D15BF8700007E57 /* CustomButton.swift in Sources */,
+				478945FD1D15BF8700007E57 /* ScanResultViewController.swift in Sources */,
+				478945FA1D15BF8700007E57 /* HistoriesViewController.swift in Sources */,
+				478946001D15BF8700007E57 /* TableViewController.swift in Sources */,
+				478945FF1D15BF8700007E57 /* SizeUtils.swift in Sources */,
+				478945F91D15BF8700007E57 /* Extensions.swift in Sources */,
+				478945FC1D15BF8700007E57 /* ScanHistoryModel.swift in Sources */,
+				478945FE1D15BF8700007E57 /* ScanViewController.swift in Sources */,
+				4789460B1D15C01100007E57 /* UIView+Toast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,19 +334,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/QR-Code/libs/ZBarSDK/Headers",
-					"$(PROJECT_DIR)/QR-Code/libs/Toast/Toast/Toast",
+					"$(PROJECT_DIR)/libs/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/libs/Toast/Toast/Toast",
 				);
-				INFOPLIST_FILE = "QR-Code/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/QR-Code/libs/ZBarSDK",
+					"$(PROJECT_DIR)/libs/ZBarSDK",
 				);
 				OTHER_LDFLAGS = "-liconv";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.undo.og.QR-Code";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "QR-Code/QR-Code-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/QR-Code-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -337,19 +359,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/QR-Code/libs/ZBarSDK/Headers",
-					"$(PROJECT_DIR)/QR-Code/libs/Toast/Toast/Toast",
+					"$(PROJECT_DIR)/libs/ZBarSDK/Headers",
+					"$(PROJECT_DIR)/libs/Toast/Toast/Toast",
 				);
-				INFOPLIST_FILE = "QR-Code/Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/QR-Code/libs/ZBarSDK",
+					"$(PROJECT_DIR)/libs/ZBarSDK",
 				);
 				OTHER_LDFLAGS = "-liconv";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.undo.og.QR-Code";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "QR-Code/QR-Code-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/QR-Code-Bridging-Header.h";
 			};
 			name = Release;
 		};
