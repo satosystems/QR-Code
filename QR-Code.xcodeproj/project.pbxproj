@@ -370,7 +370,7 @@
 					"$(PROJECT_DIR)/libs/ZBarSDK",
 				);
 				OTHER_LDFLAGS = "-liconv";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.undo.og.QR-Code";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.undo.og.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/QR-Code-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -395,7 +395,7 @@
 					"$(PROJECT_DIR)/libs/ZBarSDK",
 				);
 				OTHER_LDFLAGS = "-liconv";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.undo.og.QR-Code";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.undo.og.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/QR-Code-Bridging-Header.h";
 			};
