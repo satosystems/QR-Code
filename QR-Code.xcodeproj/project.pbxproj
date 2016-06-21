@@ -20,7 +20,6 @@
 		478945FF1D15BF8700007E57 /* SizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F41D15BF8700007E57 /* SizeUtils.swift */; };
 		478946001D15BF8700007E57 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478945F51D15BF8700007E57 /* TableViewController.swift */; };
 		478946021D15BF9300007E57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478946011D15BF9300007E57 /* Assets.xcassets */; };
-		478946051D15BFA400007E57 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478946041D15BFA400007E57 /* LaunchImage.xcassets */; };
 		478946071D15BFBA00007E57 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 478946061D15BFBA00007E57 /* Info.plist */; };
 		478946091D15BFC900007E57 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 478946081D15BFC900007E57 /* Settings.bundle */; };
 		4789460B1D15C01100007E57 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4789460A1D15C01100007E57 /* UIView+Toast.m */; };
@@ -45,7 +44,6 @@
 		478945F41D15BF8700007E57 /* SizeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeUtils.swift; sourceTree = "<group>"; };
 		478945F51D15BF8700007E57 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		478946011D15BF9300007E57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		478946041D15BFA400007E57 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImage.xcassets; sourceTree = "<group>"; };
 		478946061D15BFBA00007E57 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478946081D15BFC900007E57 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4789460A1D15C01100007E57 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "libs/Toast/Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				478946011D15BF9300007E57 /* Assets.xcassets */,
-				478946041D15BFA400007E57 /* LaunchImage.xcassets */,
 				4789461F1D15CA9400007E57 /* InfoPlist.strings */,
 				478946161D15C48500007E57 /* Localizable.strings */,
 				478946081D15BFC900007E57 /* Settings.bundle */,
@@ -203,7 +200,6 @@
 				478946091D15BFC900007E57 /* Settings.bundle in Resources */,
 				4789461D1D15CA9400007E57 /* InfoPlist.strings in Resources */,
 				4789460F1D15C07D00007E57 /* camera@2x.png in Resources */,
-				478946051D15BFA400007E57 /* LaunchImage.xcassets in Resources */,
 				478946141D15C48500007E57 /* Localizable.strings in Resources */,
 				478946021D15BF9300007E57 /* Assets.xcassets in Resources */,
 				478946101D15C07D00007E57 /* list@2x.png in Resources */,
