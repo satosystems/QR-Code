@@ -57,11 +57,20 @@ class ScanResultViewController: BaseViewController {
         addLabel(NSLocalizedString("Actions", comment: "Actions"), y: &y)
 
         if isScheme(data) {
-            addButton(NSLocalizedString("Open in App", comment: "Open in App"), y: &y, action: #selector(ScanResultViewController.openInApp))
+            addButton(NSLocalizedString("Open in App", comment: "Open in App"),
+                      imageName: "external",
+                      y: &y,
+                      action: #selector(ScanResultViewController.openInApp))
         }
-        addButton(NSLocalizedString("Copy to Clipboard", comment: "Copy to Clipboard"), y: &y, action: #selector(ScanResultViewController.copyToClipboard))
+        addButton(NSLocalizedString("Copy to Clipboard", comment: "Copy to Clipboard"),
+                  imageName: "clipboard",
+                  y: &y,
+                  action: #selector(ScanResultViewController.copyToClipboard))
 
-        addButton(NSLocalizedString("Share", comment: "Share"), y: &y, action: #selector(ScanResultViewController.share))
+        addButton(NSLocalizedString("Share", comment: "Share"),
+                  imageName: "share",
+                  y: &y,
+                  action: #selector(ScanResultViewController.share))
     }
 
     func onClick() {
@@ -98,11 +107,16 @@ class ScanResultViewController: BaseViewController {
         return false
     }
 
-    private func addButton(title: String, inout y: CGFloat, action: Selector) {
+    private func addButton(title: String, imageName: String, inout y: CGFloat, action: Selector) {
         let frame = CGRect(x: margin, y: y, width: view.frame.width - margin * 2, height: buttonHeight)
         let button = CustomButton(frame: frame)
+        let image = UIImage(named: imageName)!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         button.setTitle(title, forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
         button.addTarget(self, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, -margin, 0, 0)
+        button.setImage(image, forState: UIControlState.Normal)
+        button.tintColor = UIColor.whiteColor()
         view.addSubview(button)
         y += buttonHeight + margin
     }

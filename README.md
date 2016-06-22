@@ -3,7 +3,10 @@
 The following icons copied from https://icons8.com/.
 
 * camera@2x.png
+* clipboard@2x.png
+* external@2x.png
 * list@2x.png
+* share@2x.png
 
 ## Create Launch Images
 

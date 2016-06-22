@@ -26,6 +26,9 @@
 		478946101D15C07D00007E57 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4789460E1D15C07D00007E57 /* list@2x.png */; };
 		478946141D15C48500007E57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 478946161D15C48500007E57 /* Localizable.strings */; };
 		4789461D1D15CA9400007E57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4789461F1D15CA9400007E57 /* InfoPlist.strings */; };
+		478946271D1A969900007E57 /* clipboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 478946241D1A969900007E57 /* clipboard@2x.png */; };
+		478946291D1A969900007E57 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 478946261D1A969900007E57 /* share@2x.png */; };
+		4789462B1D1A96E000007E57 /* external@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4789462A1D1A96E000007E57 /* external@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		4789461A1D15C96000007E57 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4789461E1D15CA9400007E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		478946201D15CAC200007E57 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		478946241D1A969900007E57 /* clipboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard@2x.png"; sourceTree = "<group>"; };
+		478946261D1A969900007E57 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		4789462A1D1A96E000007E57 /* external@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "external@2x.png"; sourceTree = "<group>"; };
 		47E8445F1D12C7390064777A /* QR-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,7 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				4789460D1D15C07D00007E57 /* camera@2x.png */,
+				478946241D1A969900007E57 /* clipboard@2x.png */,
+				4789462A1D1A96E000007E57 /* external@2x.png */,
 				4789460E1D15C07D00007E57 /* list@2x.png */,
+				478946261D1A969900007E57 /* share@2x.png */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -198,8 +207,11 @@
 			files = (
 				478946091D15BFC900007E57 /* Settings.bundle in Resources */,
 				4789461D1D15CA9400007E57 /* InfoPlist.strings in Resources */,
+				478946291D1A969900007E57 /* share@2x.png in Resources */,
 				4789460F1D15C07D00007E57 /* camera@2x.png in Resources */,
 				478946141D15C48500007E57 /* Localizable.strings in Resources */,
+				478946271D1A969900007E57 /* clipboard@2x.png in Resources */,
+				4789462B1D1A96E000007E57 /* external@2x.png in Resources */,
 				478946021D15BF9300007E57 /* Assets.xcassets in Resources */,
 				478946101D15C07D00007E57 /* list@2x.png in Resources */,
 			);
