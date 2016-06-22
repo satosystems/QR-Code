@@ -60,6 +60,8 @@ class ScanResultViewController: BaseViewController {
             addButton(NSLocalizedString("Open in App", comment: "Open in App"), y: &y, action: #selector(ScanResultViewController.openInApp))
         }
         addButton(NSLocalizedString("Copy to Clipboard", comment: "Copy to Clipboard"), y: &y, action: #selector(ScanResultViewController.copyToClipboard))
+
+        addButton(NSLocalizedString("Share", comment: "Share"), y: &y, action: #selector(ScanResultViewController.share))
     }
 
     func onClick() {
@@ -77,6 +79,11 @@ class ScanResultViewController: BaseViewController {
         pasteboard.setValue(data, forPasteboardType: "public.text")
 
         view.makeToast(NSLocalizedString("Data of QR Code has been copied to clipboard.", comment: "Data of QR Code has been copied to clipboard."))
+    }
+
+    func share() {
+        let avc = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+        presentViewController(avc, animated: true, completion: nil)
     }
 
     private func isScheme(data: String) -> Bool {
