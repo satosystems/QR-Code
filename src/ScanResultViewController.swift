@@ -23,7 +23,7 @@ class ScanResultViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = NSLocalizedString("Scan Result", comment: "Scan Result")
+        title = NSLocalizedString("Scan Result", comment: "スキャン結果")
 
         let button = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(ScanResultViewController.onClick))
         navigationItem.rightBarButtonItem = button
@@ -33,7 +33,7 @@ class ScanResultViewController: BaseViewController {
         y += SizeUtils.navigationBarHeight(navigationController!)
         y += margin
 
-        addLabel(NSLocalizedString("Data", comment: "Data"), y: &y)
+        addLabel(NSLocalizedString("Data", comment: "データ"), y: &y)
 
         let label = UILabel()
         label.numberOfLines = 0
@@ -54,20 +54,20 @@ class ScanResultViewController: BaseViewController {
         view.addSubview(label)
 
         y += margin
-        addLabel(NSLocalizedString("Actions", comment: "Actions"), y: &y)
+        addLabel(NSLocalizedString("Actions", comment: "アクション"), y: &y)
 
         if isScheme(data) {
-            addButton(NSLocalizedString("Open in App", comment: "Open in App"),
+            addButton(NSLocalizedString("Open in App", comment: "アプリで開く"),
                       imageName: "external",
                       y: &y,
                       action: #selector(ScanResultViewController.openInApp))
         }
-        addButton(NSLocalizedString("Copy to Clipboard", comment: "Copy to Clipboard"),
+        addButton(NSLocalizedString("Copy to Clipboard", comment: "クリップボードにコピー"),
                   imageName: "clipboard",
                   y: &y,
                   action: #selector(ScanResultViewController.copyToClipboard))
 
-        addButton(NSLocalizedString("Share", comment: "Share"),
+        addButton(NSLocalizedString("Share", comment: "シェア"),
                   imageName: "share",
                   y: &y,
                   action: #selector(ScanResultViewController.share))
@@ -87,7 +87,7 @@ class ScanResultViewController: BaseViewController {
         let pasteboard = UIPasteboard.generalPasteboard()
         pasteboard.setValue(data, forPasteboardType: "public.text")
 
-        view.makeToast(NSLocalizedString("Data of QR Code has been copied to clipboard.", comment: "Data of QR Code has been copied to clipboard."))
+        view.makeToast(NSLocalizedString("Data of QR Code has been copied to clipboard.", comment: "QRコードデータをクリップボードにコピーしました。"))
     }
 
     func share() {

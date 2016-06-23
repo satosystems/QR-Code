@@ -17,8 +17,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let historiesView = HistoriesViewController()
         let navigationView = UINavigationController(rootViewController: historiesView)
 
-        scanView.tabBarItem = UITabBarItem(title: NSLocalizedString("Scan", comment: "Scan"), image: UIImage(named: "camera"), tag: 1)
-        navigationView.tabBarItem = UITabBarItem(title: NSLocalizedString("Histories", comment: "Histories"), image: UIImage(named: "list"), tag: 2)
+        scanView.tabBarItem = UITabBarItem(title: NSLocalizedString("Scan", comment: "スキャン"), image: UIImage(named: "camera"), tag: 1)
+        navigationView.tabBarItem = UITabBarItem(title: NSLocalizedString("Histories", comment: "履歴"), image: UIImage(named: "list"), tag: 2)
 
         self.setViewControllers([scanView, navigationView], animated: false)
     }
