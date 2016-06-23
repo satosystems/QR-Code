@@ -50,12 +50,10 @@ class HistoriesViewController: BaseViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        if withDetail && tableView != nil {
+            tableView.reloadData()
+        }
         if tableView == nil {
-            if childViewControllers.count != 0 {
-                let shvc = childViewControllers[0] as! ScanHistoriesViewController
-                shvc.removeFromParentViewController()
-                shvc.view.removeFromSuperview()
-            }
             let shvc = ScanHistoriesViewController()
             shvc.parent = self
             addChildViewController(shvc)
@@ -87,7 +85,6 @@ class HistoriesViewController: BaseViewController {
     }
 
     func openScanResult() {
-        tableView = nil
         withDetail = true
         let delegate = tabBarController?.delegate
         delegate!.tabBarController!(tabBarController!, shouldSelectViewController: self)
