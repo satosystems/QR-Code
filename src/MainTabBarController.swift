@@ -32,7 +32,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let toIndex = (selectedIndex + 1) % 2
         let fromViewController = tabBarController.viewControllers![selectedIndex]
         let fromView = fromViewController.view
-        let toView = viewController.view;
+        let toView = viewController.view
 
         // Get the size of the view area.
         let scrollRight = toIndex > tabBarController.selectedIndex
@@ -52,7 +52,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
                 if (finished) {
                     // Remove the old view from the tabbar view.
                     fromView.removeFromSuperview()
-                    tabBarController.selectedIndex = toIndex;
+                    tabBarController.selectedIndex = toIndex
                 }
         })
         return false
