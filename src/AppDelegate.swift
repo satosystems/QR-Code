@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        NSSetUncaughtExceptionHandler { exception in
+            print("Exception:", exception);
+            print("Stack Trace:", exception.callStackSymbols);
+        }
+
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
