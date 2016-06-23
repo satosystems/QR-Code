@@ -10,8 +10,6 @@ import AVFoundation
 import UIKit
 
 class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
-    var started: Bool = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
         readerView.readerDelegate = self
@@ -32,20 +30,5 @@ class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
         let nc = tabBarController?.viewControllers![1] as! UINavigationController
         let hvc = nc.childViewControllers[0] as! HistoriesViewController
         hvc.openScanResult()
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        if !started {
-            started = true
-            super.viewWillAppear(animated)
-        }
-    }
-
-    override func viewWillDisappear(animated: Bool) {
-        // ignored
-    }
-
-    override func viewDidDisappear(animated: Bool) {
-        // ignored
     }
 }
