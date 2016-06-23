@@ -60,12 +60,7 @@ class HistoriesViewController: BaseViewController {
             view.addSubview(shvc.view)
             shvc.didMoveToParentViewController(self)
 
-            let tabBarHeight = SizeUtils.tabBarHeight(tabBarController!)
-            shvc.view.frame = CGRect(x: 0,
-                                     y: 0,
-                                     width: view.frame.width,
-                                     height: view.frame.height - tabBarHeight)
-            
+            shvc.view.frame = view.frame
             tableView = shvc.view as! UITableView
         }
     }
