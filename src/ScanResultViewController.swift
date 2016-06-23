@@ -91,7 +91,11 @@ class ScanResultViewController: BaseViewController {
     }
 
     func share() {
-        let avc = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+        let items: [AnyObject] = [isScheme(data) ? NSURL(string: data)! : data]
+        let avc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        if #available(iOS 8.0, *) {
+            avc.popoverPresentationController!.sourceView = self.view
+        }
         presentViewController(avc, animated: true, completion: nil)
     }
 
