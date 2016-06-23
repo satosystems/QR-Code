@@ -10,6 +10,7 @@ import UIKit
 
 class HistoriesViewController: BaseViewController {
     class ScanHistoriesViewController: TableViewController {
+        private let estimatedRowHeight: CGFloat = 100
         weak var parent: HistoriesViewController! = nil
 
         override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +35,10 @@ class HistoriesViewController: BaseViewController {
             ScanHistoryModel.getInstance().removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: indexPath.row, inSection: 0)],
                                              withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+
+        override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            return estimatedRowHeight
         }
     }
 
