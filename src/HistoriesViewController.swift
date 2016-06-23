@@ -86,8 +86,7 @@ class HistoriesViewController: BaseViewController {
 
     func openScanResult() {
         withDetail = true
-        let delegate = tabBarController?.delegate
-        delegate!.tabBarController!(tabBarController!, shouldSelectViewController: self)
+        tabBarController?.selectedIndex = 1
     }
 
     func openScanResult(data: String) {
