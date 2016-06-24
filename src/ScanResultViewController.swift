@@ -38,7 +38,7 @@ class ScanResultViewController: BaseViewController {
         let label = UILabel()
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.ByCharWrapping
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.adjustsFontSizeToFitWidth = false
 
         label.text = data
 
