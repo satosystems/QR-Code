@@ -22,9 +22,12 @@ class ScanHistoryModel {
             histories = loadScanHistories()
         }
         histories?.insert(data, atIndex: 0)
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(histories, forKey: key)
-        userDefaults.synchronize()
+
+        if !uniqIfNeeded() {
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            userDefaults.setObject(histories, forKey: key)
+            userDefaults.synchronize()
+        }
     }
 
     func loadScanHistories() -> [String] {
@@ -44,5 +47,16 @@ class ScanHistoryModel {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(histories, forKey: key)
         userDefaults.synchronize()
+    }
+
+    func uniqIfNeeded() -> Bool {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let updated = userDefaults.boolForKey(AppDelegate.summarizing)
+        if updated && histories != nil {
+            histories = histories?.uniq()
+            userDefaults.setObject(histories, forKey: key)
+            userDefaults.synchronize()
+        }
+        return updated
     }
 }

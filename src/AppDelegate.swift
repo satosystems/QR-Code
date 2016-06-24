@@ -10,9 +10,11 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    static let summarizing = "summarizing"
+    static let settingsChanged = "settingsChanged"
 
     var window: UIWindow?
-
+    var summarizing: Bool = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         NSSetUncaughtExceptionHandler { exception in
@@ -25,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.rootViewController = MainTabBarController()
         window?.makeKeyAndVisible()
+
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        summarizing = userDefaults.boolForKey(AppDelegate.summarizing)
 
         return true
     }
@@ -45,12 +50,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if userDefaults.boolForKey(AppDelegate.summarizing) != summarizing {
+            summarizing = !summarizing
+            ScanHistoryModel.getInstance().uniqIfNeeded()
+            NSNotificationCenter.defaultCenter().postNotificationName(AppDelegate.settingsChanged, object: summarizing)
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

@@ -5,12 +5,22 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Summarizing the same histories</string>
+			<key>Key</key>
+			<string>summarizing</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>About</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>FooterText</key>
-			<string>Copyright © 2016 App research and development.</string>
+			<string>Copyright © 2016 App research and development. All rights reserved.</string>
 		</dict>
 		<dict>
 			<key>Type</key>

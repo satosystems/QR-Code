@@ -36,6 +36,18 @@ extension UIColor {
     }
 }
 
+extension SequenceType where Generator.Element: Equatable {
+    public func uniq() -> [Generator.Element] {
+        var result: [Generator.Element] = []
+        for element in self {
+            if !result.contains(element) {
+                result.append(element)
+            }
+        }
+        return result
+    }
+}
+
 extension ZBarSymbolSet: SequenceType {
     public func generate() -> NSFastGenerator {
         return NSFastGenerator(self)

@@ -9,20 +9,41 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    private var scanViewController: ScanViewController?
+    private var historiesViewController: HistoriesViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let scanView = ScanViewController()
-        let historiesView = HistoriesViewController()
-        let navigationView = UINavigationController(rootViewController: historiesView)
+        scanViewController = ScanViewController()
+        historiesViewController = HistoriesViewController()
+        let navigationViewController = UINavigationController(rootViewController: historiesViewController!)
 
-        scanView.tabBarItem = UITabBarItem(title: NSLocalizedString("Scan", comment: "スキャン"), image: UIImage(named: "camera"), tag: 1)
-        navigationView.tabBarItem = UITabBarItem(title: NSLocalizedString("Histories", comment: "履歴"), image: UIImage(named: "list"), tag: 2)
+        scanViewController!.tabBarItem =
+            UITabBarItem(title: NSLocalizedString("Scan", comment: "スキャン"),
+                         image: UIImage(named: "camera"),
+                         tag: 1)
+        navigationViewController.tabBarItem =
+            UITabBarItem(title: NSLocalizedString("Histories", comment: "履歴"),
+                         image: UIImage(named: "list"),
+                         tag: 2)
 
-        setViewControllers([scanView, navigationView], animated: false)
+        setViewControllers([scanViewController!, navigationViewController], animated: false)
+
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(self.reloadData),
+                                                         name: AppDelegate.settingsChanged,
+                                                         object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    func reloadData() {
+        let tableViewController = historiesViewController?.childViewControllers[0] as! UITableViewController
+        let tableView = tableViewController.tableView
+        tableView.reloadData()
+        tableView.dataSource = tableViewController
     }
 }
