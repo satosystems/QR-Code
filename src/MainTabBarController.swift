@@ -8,32 +8,9 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
-    class TabAnimation: NSObject, UIViewControllerAnimatedTransitioning {
-        func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-            return 0.5
-        }
-
-        func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-            let from: UIViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-            let to: UIViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
-            let container: UIView = transitionContext.containerView()!
-            container.insertSubview(to.view, aboveSubview: from.view)
-            to.view.alpha = 0.0
-
-            UIView.animateWithDuration(transitionDuration(transitionContext),
-                                       animations: {() -> Void in
-                                        from.view.alpha = 0.0
-                                        to.view.alpha = 1.0
-                }, completion: {(finished: Bool) in
-                    transitionContext.completeTransition(true)
-            })
-        }
-    }
-
+class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
 
         let scanView = ScanViewController()
         let historiesView = HistoriesViewController()
@@ -47,11 +24,5 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-
-    func tabBarController(tabBarController: UITabBarController,
-                          animationControllerForTransitionFromViewController fromVC: UIViewController,
-                                                                             toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        return TabAnimation()
     }
 }
