@@ -10,7 +10,7 @@ import UIKit
 
 struct SizeUtils {
     static func bounds() -> CGRect {
-        return UIScreen.mainScreen().bounds
+        return UIScreen.main.bounds
     }
 
     static func screenWidth() -> CGFloat {
@@ -22,14 +22,14 @@ struct SizeUtils {
     }
 
     static func statusBarHeight() -> CGFloat {
-        return UIApplication.sharedApplication().statusBarFrame.height
+        return UIApplication.shared.statusBarFrame.height
     }
 
-    static func navigationBarHeight(navigationController: UINavigationController) -> CGFloat {
+    static func navigationBarHeight(_ navigationController: UINavigationController) -> CGFloat {
         return navigationController.navigationBar.frame.size.height
     }
 
-    static func tabBarHeight(tabBarController: UITabBarController) -> CGFloat {
+    static func tabBarHeight(_ tabBarController: UITabBarController) -> CGFloat {
         return tabBarController.tabBar.frame.size.height
     }
 }

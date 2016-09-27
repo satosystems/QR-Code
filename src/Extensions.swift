@@ -26,7 +26,7 @@ extension UIColor {
         return UIColor.rgbColor(0x234B7C)
     }
 
-    class func rgbColor(rgbValue: UInt) -> UIColor {
+    class func rgbColor(_ rgbValue: UInt) -> UIColor {
         return UIColor(
             red:   CGFloat((rgbValue & 0xFF0000) >> 16) / 0xFF,
             green: CGFloat((rgbValue & 0x00FF00) >>  8) / 0xFF,
@@ -36,9 +36,9 @@ extension UIColor {
     }
 }
 
-extension SequenceType where Generator.Element: Equatable {
-    public func uniq() -> [Generator.Element] {
-        var result: [Generator.Element] = []
+extension Sequence where Iterator.Element: Equatable {
+    public func uniq() -> [Iterator.Element] {
+        var result: [Iterator.Element] = []
         for element in self {
             if !result.contains(element) {
                 result.append(element)
@@ -48,8 +48,8 @@ extension SequenceType where Generator.Element: Equatable {
     }
 }
 
-extension ZBarSymbolSet: SequenceType {
-    public func generate() -> NSFastGenerator {
-        return NSFastGenerator(self)
+extension ZBarSymbolSet: Sequence {
+    public func makeIterator() -> NSFastEnumerationIterator {
+        return NSFastEnumerationIterator(self)
     }
 }

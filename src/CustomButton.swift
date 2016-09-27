@@ -18,28 +18,28 @@ class CustomButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
+    fileprivate func setup() {
         layer.cornerRadius = 4.0
         layer.masksToBounds = true
-        layer.borderColor = UIColor.appBorderColor().CGColor
+        layer.borderColor = UIColor.appBorderColor().cgColor
         layer.borderWidth = 1.0
 
-        setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        setBackgroundImage(imageWithColor(UIColor.appColor()), forState: UIControlState.Normal)
-        setBackgroundImage(imageWithColor(UIColor.appHighlightColor()), forState: UIControlState.Highlighted)
+        setTitleColor(UIColor.white, for: UIControlState())
+        setBackgroundImage(imageWithColor(UIColor.appColor()), for: UIControlState())
+        setBackgroundImage(imageWithColor(UIColor.appHighlightColor()), for: UIControlState.highlighted)
     }
 
-    private func imageWithColor(color: UIColor) -> UIImage {
+    fileprivate func imageWithColor(_ color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
 
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        context?.setFillColor(color.cgColor)
+        context?.fill(rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 }

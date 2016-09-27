@@ -9,23 +9,23 @@
 import Foundation
 
 class ScanHistoryModel {
-    private let key = "histories"
-    private static let singleton = ScanHistoryModel()
+    fileprivate let key = "histories"
+    fileprivate static let singleton = ScanHistoryModel()
     var histories: [String]?
 
     static func getInstance() -> ScanHistoryModel {
         return singleton
     }
 
-    func addScanHistory(data: String) {
+    func addScanHistory(_ data: String) {
         if (histories == nil) {
             histories = loadScanHistories()
         }
-        histories?.insert(data, atIndex: 0)
+        histories?.insert(data, at: 0)
 
         if !uniqIfNeeded() {
-            let userDefaults = NSUserDefaults.standardUserDefaults()
-            userDefaults.setObject(histories, forKey: key)
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(histories, forKey: key)
             userDefaults.synchronize()
         }
     }
@@ -34,27 +34,27 @@ class ScanHistoryModel {
         if (histories != nil) {
             return histories!
         }
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        histories = userDefaults.stringArrayForKey(key)
+        let userDefaults = UserDefaults.standard
+        histories = userDefaults.stringArray(forKey: key)
         if (histories == nil) {
             histories = []
         }
         return histories!
     }
 
-    func removeAtIndex(index: Int) {
-        histories?.removeAtIndex(index)
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(histories, forKey: key)
+    func removeAtIndex(_ index: Int) {
+        histories?.remove(at: index)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(histories, forKey: key)
         userDefaults.synchronize()
     }
 
     func uniqIfNeeded() -> Bool {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let updated = userDefaults.boolForKey(AppDelegate.summarizing)
+        let userDefaults = UserDefaults.standard
+        let updated = userDefaults.bool(forKey: AppDelegate.summarizing)
         if updated && histories != nil {
             histories = histories?.uniq()
-            userDefaults.setObject(histories, forKey: key)
+            userDefaults.set(histories, forKey: key)
             userDefaults.synchronize()
         }
         return updated

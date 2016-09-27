@@ -10,34 +10,34 @@ import UIKit
 
 class HistoriesViewController: BaseViewController {
     class ScanHistoriesViewController: TableViewController {
-        private let estimatedRowHeight: CGFloat = 100
-        weak var parent: HistoriesViewController! = nil
+        fileprivate let estimatedRowHeight: CGFloat = 100
+        weak var parent2: HistoriesViewController! = nil
 
-        override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return ScanHistoryModel.getInstance().loadScanHistories().count
         }
 
-        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-            cell.textLabel?.text = ScanHistoryModel.getInstance().loadScanHistories()[indexPath.row]
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+            cell.textLabel?.text = ScanHistoryModel.getInstance().loadScanHistories()[(indexPath as NSIndexPath).row]
             return cell
         }
 
-        override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-            parent.openScanResult(ScanHistoryModel.getInstance().loadScanHistories()[indexPath.row])
+        override func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
+            parent2.openScanResult(ScanHistoryModel.getInstance().loadScanHistories()[(indexPath as NSIndexPath).row])
         }
 
-        override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
             return true
         }
 
-        override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-            ScanHistoryModel.getInstance().removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: indexPath.row, inSection: 0)],
-                                             withRowAnimation: UITableViewRowAnimation.Fade)
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+            ScanHistoryModel.getInstance().removeAtIndex((indexPath as NSIndexPath).row)
+            tableView.deleteRows(at: [IndexPath(row: (indexPath as NSIndexPath).row, section: 0)],
+                                             with: UITableViewRowAnimation.fade)
         }
 
-        override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
             return estimatedRowHeight
         }
     }
@@ -50,27 +50,27 @@ class HistoriesViewController: BaseViewController {
 
         title = NSLocalizedString("Histories", comment: "履歴")
 
-        navigationItem.rightBarButtonItem = editButtonItem()
+        navigationItem.rightBarButtonItem = editButtonItem
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if withDetail && tableView != nil {
             tableView.reloadData()
         }
         if tableView == nil {
             let shvc = ScanHistoriesViewController()
-            shvc.parent = self
+            shvc.parent2 = self
             addChildViewController(shvc)
             view.addSubview(shvc.view)
-            shvc.didMoveToParentViewController(self)
+            shvc.didMove(toParentViewController: self)
 
             shvc.view.frame = view.frame
             tableView = shvc.view as! UITableView
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if withDetail {
             withDetail = false
@@ -79,9 +79,9 @@ class HistoriesViewController: BaseViewController {
         }
     }
 
-    override func setEditing(editing: Bool, animated: Bool) {
+    override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-        tableView.editing = editing
+        tableView.isEditing = editing
     }
 
     func openScanResult() {
@@ -89,9 +89,9 @@ class HistoriesViewController: BaseViewController {
         tabBarController?.selectedIndex = 1
     }
 
-    func openScanResult(data: String) {
+    func openScanResult(_ data: String) {
         let srvc = ScanResultViewController(data: data)
         let nc = UINavigationController(rootViewController: srvc)
-        presentViewController(nc, animated: true, completion: nil)
+        present(nc, animated: true, completion: nil)
     }
 }

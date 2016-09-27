@@ -25,7 +25,7 @@ class ScanResultViewController: BaseViewController {
 
         title = NSLocalizedString("Scan Result", comment: "スキャン結果")
 
-        let button = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(ScanResultViewController.onClick))
+        let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ScanResultViewController.onClick))
         navigationItem.rightBarButtonItem = button
 
         var y: CGFloat = 0
@@ -37,7 +37,7 @@ class ScanResultViewController: BaseViewController {
 
         let label = UILabel()
         label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.ByCharWrapping
+        label.lineBreakMode = NSLineBreakMode.byCharWrapping
         label.adjustsFontSizeToFitWidth = false
 
         label.text = data
@@ -74,35 +74,35 @@ class ScanResultViewController: BaseViewController {
     }
 
     func onClick() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     func openInApp() {
-        if let url = NSURL(string: data) {
-            UIApplication.sharedApplication().openURL(url)
+        if let url = URL(string: data) {
+            UIApplication.shared.openURL(url)
         }
     }
 
     func copyToClipboard() {
-        let pasteboard = UIPasteboard.generalPasteboard()
+        let pasteboard = UIPasteboard.general
         pasteboard.setValue(data, forPasteboardType: "public.text")
 
         view.makeToast(NSLocalizedString("Data of QR Code has been copied to clipboard.", comment: "QRコードデータをクリップボードにコピーしました。"))
     }
 
     func share() {
-        let items: [AnyObject] = [isScheme(data) ? NSURL(string: data)! : data]
+        let items: [AnyObject] = [isScheme(data) ? URL(string: data)! as AnyObject : data as AnyObject]
         let avc = UIActivityViewController(activityItems: items, applicationActivities: nil)
         if #available(iOS 8.0, *) {
             avc.popoverPresentationController!.sourceView = self.view
         }
-        presentViewController(avc, animated: true, completion: nil)
+        present(avc, animated: true, completion: nil)
     }
 
-    private func isScheme(data: String) -> Bool {
+    fileprivate func isScheme(_ data: String) -> Bool {
         do {
             let regexp = try NSRegularExpression(pattern: "^[a-z+.-]+://", options: [])
-            return regexp.numberOfMatchesInString(data,
+            return regexp.numberOfMatches(in: data,
                                                   options: [],
                                                   range: NSMakeRange(0, data.characters.count)) > 0
         } catch {
@@ -111,25 +111,25 @@ class ScanResultViewController: BaseViewController {
         return false
     }
 
-    private func addButton(title: String, imageName: String, inout y: CGFloat, action: Selector) {
+    fileprivate func addButton(_ title: String, imageName: String, y: inout CGFloat, action: Selector) {
         let frame = CGRect(x: margin, y: y, width: view.frame.width - margin * 2, height: buttonHeight)
         let button = CustomButton(frame: frame)
-        let image = UIImage(named: imageName)!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        button.setTitle(title, forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
-        button.addTarget(self, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        let image = UIImage(named: imageName)!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        button.setTitle(title, for: UIControlState())
+        button.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
+        button.addTarget(self, action: action, for: UIControlEvents.touchUpInside)
         button.imageEdgeInsets = UIEdgeInsetsMake(0, -margin, 0, 0)
-        button.setImage(image, forState: UIControlState.Normal)
-        button.tintColor = UIColor.whiteColor()
+        button.setImage(image, for: UIControlState())
+        button.tintColor = UIColor.white
         view.addSubview(button)
         y += buttonHeight + margin
     }
 
-    private func addLabel(title: String, inout y: CGFloat) {
+    fileprivate func addLabel(_ title: String, y: inout CGFloat) {
         let frame = CGRect(x: margin, y: y, width: view.frame.width - margin * 2, height: labelHeight)
         let label = UILabel(frame: frame)
         label.text = title
-        label.font = UIFont.boldSystemFontOfSize(UIFont.labelFontSize())
+        label.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         view.addSubview(label)
         y += labelHeight + margin
     }

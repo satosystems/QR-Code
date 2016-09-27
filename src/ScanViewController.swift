@@ -16,14 +16,14 @@ class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
         showsCameraControls = false
         showsZBarControls = false
         tracksSymbols = true
-        readerView.torchMode = AVCaptureTorchMode.Off.rawValue
+        readerView.torchMode = AVCaptureTorchMode.off.rawValue
         readerView.frame = view.frame
     }
 
-    func readerView(readerView: ZBarReaderView!, didReadSymbols symbols: ZBarSymbolSet!, fromImage image: UIImage!) {
+    func readerView(_ readerView: ZBarReaderView!, didRead symbols: ZBarSymbolSet!, from image: UIImage!) {
         var data = ""
         for symbol in symbols {
-            data += symbol.data
+            data += (symbol as AnyObject).data
         }
         ScanHistoryModel.getInstance().addScanHistory(data as String)
 

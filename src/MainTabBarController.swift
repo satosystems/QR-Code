@@ -9,8 +9,8 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    private var scanViewController: ScanViewController?
-    private var historiesViewController: HistoriesViewController?
+    fileprivate var scanViewController: ScanViewController?
+    fileprivate var historiesViewController: HistoriesViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,9 @@ class MainTabBarController: UITabBarController {
 
         setViewControllers([scanViewController!, navigationViewController], animated: false)
 
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                                          selector: #selector(self.reloadData),
-                                                         name: AppDelegate.settingsChanged,
+                                                         name: NSNotification.Name(rawValue: AppDelegate.settingsChanged),
                                                          object: nil)
     }
 
@@ -43,7 +43,7 @@ class MainTabBarController: UITabBarController {
     func reloadData() {
         let tableViewController = historiesViewController?.childViewControllers[0] as! UITableViewController
         let tableView = tableViewController.tableView
-        tableView.reloadData()
-        tableView.dataSource = tableViewController
+        tableView?.reloadData()
+        tableView?.dataSource = tableViewController
     }
 }
