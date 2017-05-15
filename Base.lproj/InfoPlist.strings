@@ -7,3 +7,4 @@
 */
 
 CFBundleDisplayName = "QR Code";
+NSCameraUsageDescription = "Using for QR scan";

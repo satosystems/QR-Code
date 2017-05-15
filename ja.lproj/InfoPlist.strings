@@ -7,3 +7,4 @@
 */
 
 CFBundleDisplayName = "QRコード";
+NSCameraUsageDescription = "QRコードスキャンに使用されます";
