@@ -3,7 +3,7 @@
 //  QR-Code
 //
 //  Created by Satoshi Ogata on 2016/06/16.
-//  Copyright © 2016年 App research and development. All rights reserved.
+//  Copyright © 2016年 Satoshi Ogata. All rights reserved.
 //
 
 import UIKit
