@@ -18,7 +18,7 @@ class HistoriesViewController: BaseViewController {
         }
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+            let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Cell")
             cell.textLabel?.text = ScanHistoryModel.getInstance().loadScanHistories()[(indexPath as NSIndexPath).row]
             return cell
         }
@@ -31,10 +31,10 @@ class HistoriesViewController: BaseViewController {
             return true
         }
 
-        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             ScanHistoryModel.getInstance().removeAtIndex((indexPath as NSIndexPath).row)
             tableView.deleteRows(at: [IndexPath(row: (indexPath as NSIndexPath).row, section: 0)],
-                                             with: UITableViewRowAnimation.fade)
+                                             with: UITableView.RowAnimation.fade)
         }
 
         override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,12 +61,12 @@ class HistoriesViewController: BaseViewController {
         if tableView == nil {
             let shvc = ScanHistoriesViewController()
             shvc.parent2 = self
-            addChildViewController(shvc)
+            addChild(shvc)
             view.addSubview(shvc.view)
-            shvc.didMove(toParentViewController: self)
+            shvc.didMove(toParent: self)
 
             shvc.view.frame = view.frame
-            tableView = shvc.view as! UITableView
+            tableView = shvc.view as? UITableView
         }
     }
 

@@ -35,8 +35,8 @@ class MainTabBarController: UITabBarController {
                                                  object: nil)
     }
 
-    func reloadData() {
-        let tableViewController = historiesViewController?.childViewControllers[0] as! UITableViewController
+    @objc func reloadData() {
+        let tableViewController = historiesViewController?.children[0] as! UITableViewController
         let tableView = tableViewController.tableView
         tableView?.reloadData()
         tableView?.dataSource = tableViewController

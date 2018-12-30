@@ -73,24 +73,24 @@ class ScanResultViewController: BaseViewController {
                   action: #selector(ScanResultViewController.share))
     }
 
-    func onClick() {
+    @objc func onClick() {
         dismiss(animated: true, completion: nil)
     }
 
-    func openInApp() {
+    @objc func openInApp() {
         if let url = URL(string: data) {
-            UIApplication.shared.openURL(url)
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 
-    func copyToClipboard() {
+    @objc func copyToClipboard() {
         let pasteboard = UIPasteboard.general
         pasteboard.setValue(data, forPasteboardType: "public.text")
 
         view.makeToast(NSLocalizedString("Data of QR Code has been copied to clipboard.", comment: "QRコードデータをクリップボードにコピーしました。"))
     }
 
-    func share() {
+    @objc func share() {
         let items: [AnyObject] = [isScheme(data) ? URL(string: data)! as AnyObject : data as AnyObject]
         let avc = UIActivityViewController(activityItems: items, applicationActivities: nil)
         if #available(iOS 8.0, *) {
@@ -102,9 +102,7 @@ class ScanResultViewController: BaseViewController {
     fileprivate func isScheme(_ data: String) -> Bool {
         do {
             let regexp = try NSRegularExpression(pattern: "^[a-z+.-]+://", options: [])
-            return regexp.numberOfMatches(in: data,
-                                                  options: [],
-                                                  range: NSMakeRange(0, data.characters.count)) > 0
+            return regexp.numberOfMatches(in: data, options: [], range: NSMakeRange(0, data.count)) > 0
         } catch {
             // never come here
         }
@@ -114,12 +112,12 @@ class ScanResultViewController: BaseViewController {
     fileprivate func addButton(_ title: String, imageName: String, y: inout CGFloat, action: Selector) {
         let frame = CGRect(x: margin, y: y, width: view.frame.width - margin * 2, height: buttonHeight)
         let button = CustomButton(frame: frame)
-        let image = UIImage(named: imageName)!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        button.setTitle(title, for: UIControlState())
-        button.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
-        button.addTarget(self, action: action, for: UIControlEvents.touchUpInside)
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, -margin, 0, 0)
-        button.setImage(image, for: UIControlState())
+        let image = UIImage(named: imageName)!.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        button.setTitle(title, for: UIControl.State())
+        button.setTitleColor(UIColor.gray, for: UIControl.State.highlighted)
+        button.addTarget(self, action: action, for: UIControl.Event.touchUpInside)
+        button.imageEdgeInsets = UIEdgeInsets.init(top: 0, left: -margin, bottom: 0, right: 0)
+        button.setImage(image, for: UIControl.State())
         button.tintColor = UIColor.white
         view.addSubview(button)
         y += buttonHeight + margin

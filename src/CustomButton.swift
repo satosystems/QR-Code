@@ -24,9 +24,9 @@ class CustomButton: UIButton {
         layer.borderColor = UIColor.appBorderColor().cgColor
         layer.borderWidth = 1.0
 
-        setTitleColor(UIColor.white, for: UIControlState())
-        setBackgroundImage(imageWithColor(UIColor.appColor()), for: UIControlState())
-        setBackgroundImage(imageWithColor(UIColor.appHighlightColor()), for: UIControlState.highlighted)
+        setTitleColor(UIColor.white, for: UIControl.State())
+        setBackgroundImage(imageWithColor(UIColor.appColor()), for: UIControl.State())
+        setBackgroundImage(imageWithColor(UIColor.appHighlightColor()), for: UIControl.State.highlighted)
     }
 
     fileprivate func imageWithColor(_ color: UIColor) -> UIImage {

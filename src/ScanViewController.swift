@@ -16,7 +16,7 @@ class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
         showsCameraControls = false
         showsZBarControls = false
         tracksSymbols = true
-        readerView.torchMode = AVCaptureTorchMode.off.rawValue
+        readerView.torchMode = AVCaptureDevice.TorchMode.off.rawValue
         readerView.frame = view.frame
     }
 
@@ -28,7 +28,7 @@ class ScanViewController: ZBarReaderViewController, ZBarReaderViewDelegate {
         ScanHistoryModel.getInstance().addScanHistory(data as String)
 
         let nc = tabBarController?.viewControllers![1] as! UINavigationController
-        let hvc = nc.childViewControllers[0] as! HistoriesViewController
+        let hvc = nc.children[0] as! HistoriesViewController
         hvc.openScanResult()
     }
 }
