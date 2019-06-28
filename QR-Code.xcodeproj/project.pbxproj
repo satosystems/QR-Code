@@ -415,7 +415,7 @@
 					"$(PROJECT_DIR)/libs/ZBarSDK",
 				);
 				OTHER_LDFLAGS = "-liconv";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.undo.og.qrcode;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.satosystems.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/QR-Code-Bridging-Header.h";
@@ -448,7 +448,7 @@
 					"$(PROJECT_DIR)/libs/ZBarSDK",
 				);
 				OTHER_LDFLAGS = "-liconv";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.undo.og.qrcode;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.satosystems.qrcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/QR-Code-Bridging-Header.h";
